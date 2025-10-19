@@ -1,0 +1,2 @@
+# Transfer-matrix-method-for-modeling-ultrasonic-wave-velocity-along-battery-layers
+Transfer matrix for modeling ultrasonic wave velocity along the internal layers of lithium-ion batteries. The weak interface between electrode and separator layers is modeled as a spring boundary. The porous electrode and separator layers are modeled as effective elastic layers given the wave velocities computed by finite element simulations.

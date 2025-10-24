@@ -181,78 +181,6 @@ paras = np.polyfit(c1s, Kts_, 3)
 fun = np.poly1d(paras)
 Kt0 = fun(2500)
 
-# '''T + 10'''
-#
-# Gs = np.array([47e9,
-#                rhos[1] * 163.9 ** 2,  # anode
-#                rhos[2] * 349.7 ** 2,  # separator
-#                rhos[3] * 246.3 ** 2,  # cathode
-#                29e9])
-# Ms = np.array([199.67e9,
-#                rhos[1] * 1574.8 ** 2,  # anode
-#                rhos[2] * 1449.3 ** 2,  # separator
-#                rhos[3] * 1562.5 ** 2,  # cathode
-#                122.67e9])
-#
-# det_ = 0
-# for c1 in np.arange(2000, 4000, 1):
-#     S = transfer_matrix(2 * np.pi * f / c1, Kt0, 2 * np.pi * f, hs, rhos, Ms, Gs)
-#     det = np.linalg.det(np.array([[S[1, 0], S[1, 2]], [S[3, 0], S[3, 2]]]))
-#
-#     if det_ * det.real < 0:
-#         print(c1)
-#         break
-#     else:
-#         det_ = det.real
-#
-# '''T + 20'''
-#
-# Gs = np.array([47e9,
-#                rhos[1] * 155.3 ** 2,  # anode
-#                rhos[2] * 331.1 ** 2,  # separator
-#                rhos[3] * 232.6 ** 2,  # cathode
-#                29e9])
-# Ms = np.array([199.67e9,
-#                rhos[1] * 1526.7 ** 2,  # anode
-#                rhos[2] * 1369.9 ** 2,  # separator
-#                rhos[3] * 1515.2 ** 2,  # cathode
-#                122.67e9])
-#
-# det_ = 0
-# for c1 in np.arange(2000, 4000, 1):
-#     S = transfer_matrix(2 * np.pi * f / c1, Kt0, 2 * np.pi * f, hs, rhos, Ms, Gs)
-#     det = np.linalg.det(np.array([[S[1, 0], S[1, 2]], [S[3, 0], S[3, 2]]]))
-#
-#     if det_ * det.real < 0:
-#         print(c1)
-#         break
-#     else:
-#         det_ = det.real
-#
-# '''T + 30'''
-#
-# Gs = np.array([47e9,
-#                rhos[1] * 146.2 ** 2,  # anode
-#                rhos[2] * 310.6 ** 2,  # separator
-#                rhos[3] * 219.3 ** 2,  # cathode
-#                29e9])
-# Ms = np.array([199.67e9,
-#                rhos[1] * 1481.5 ** 2,  # anode
-#                rhos[2] * 1298.7 ** 2,  # separator
-#                rhos[3] * 1459.9 ** 2,  # cathode
-#                122.67e9])
-#
-# det_ = 0
-# for c1 in np.arange(2000, 4000, 1):
-#     S = transfer_matrix(2 * np.pi * f / c1, Kt0, 2 * np.pi * f, hs, rhos, Ms, Gs)
-#     det = np.linalg.det(np.array([[S[1, 0], S[1, 2]], [S[3, 0], S[3, 2]]]))
-#
-#     if det_ * det.real < 0:
-#         print(c1)
-#         break
-#     else:
-#         det_ = det.real
-
 '''SoC = 1'''
 
 # Thickness, density, P-wave velocity, S-wave velocity
@@ -313,3 +241,4 @@ plt.grid()
 plt.tight_layout()
 plt.savefig('multi_velocity')
 plt.close()
+
